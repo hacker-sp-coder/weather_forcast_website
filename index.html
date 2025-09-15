@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather forcast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <main class="card">
+        <div class="bgimage"></div>
+        <div class="nav">
+
+            <button class="setting">
+                <details>
+                    <summary><i class="fa-solid fa-gear"></i></summary>
+                    <ul class="Theme_and_units">
+                        <li>
+                            <details>
+                                <summary> Theme</summary>
+                                <ul class="Theme">
+                                    <li class="under light_theme">Light</li>
+                                    <li class="under dark_theme">Dark</li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary> Units</summary>
+                                <ul class="units">
+                                    <li class="under c_to_f"><sup>o</sup>C to <sup>o</sup>F</li>
+                                    <li class="under kmByhr_to_mileByhr">km/h To Mil/h</li>
+                                    <li class="under hpa_to_atm">hPa to mmHg</li>
+                                    <li class="under km_to_miles">km to miles</li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </details>
+
+            </button>
+            <!-- <div class="searchBar"> -->
+            <form action="">
+                <input type="text" placeholder="City name" autocomplete="off" id="locationSearch">
+                <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <!-- </div> -->
+        </div>
+        <div class="circleBox">
+            <div class="lenslook">
+                <div class="cityname_and_icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="cityname">Mumbai</div>
+                </div>
+                <div class="temperature_and_icon">
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <div class="temperature"><span class="myTemp">29 °C</span></div>
+                </div>
+                <figure class="tempSticker">
+                    <img src="http://openweathermap.org/img/wn/10d@4x.png" class="cloud_img" alt="">
+                </figure>
+            </div>
+        </div>
+        <div class="weather_info">
+            <div class="info_box humidity"><b class="humid">HUMIDITY</b> <i class="fa-solid fa-droplet"></i>
+                <div class="humidity_value">70%</div>
+            </div>
+            <div class="info_box wind"><b class="windy">WIND</b> <i class="fa-solid fa-wind"></i>
+                <div class="wind_value">10 km/h</div>
+            </div>
+            <div class="info_box pressure"><b class="press">PRESSURE</b> <i class="fa-solid fa-gauge"></i>
+                <div class="pressure_value"> 1005mPa</div>
+            </div>
+            <div class="info_box visibility"><b class="visible">VISIBILITY</b> <i class="fa-solid fa-mountain-sun"></i>
+                <div class="visibility_value">5 km</div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('assests/blueSkymountain.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.4s ease;
+
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.167);
+    backdrop-filter: blur(15px);
+
+}
+
+main {
+    position: relative;
+    z-index: 100;
+    width: 390px;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-repeat: no-repeat;
+    object-fit: fill;
+    box-shadow: 0px 0px 8px black;
+    
+}
+
+.bgimage {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.281), rgba(152, 244, 235, 0.626), black);
+    position: absolute;
+    z-index: 1;
+    opacity: 0.7;
+    top: 0px;
+    width: 390px;
+    height: 600px;
+    border-radius: 20px;
+
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+input,
+.search {
+    position: relative;
+    z-index: 10;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: large;
+}
+
+form {
+    margin-left: 50px;
+    position: relative;
+    z-index: 12;
+    /* border: 1px solid rgba(0, 0, 0, 0.288); */
+    border-radius: 20px;
+    font-size: large;
+    background-color: rgba(255, 255, 255, 0.397);
+    transition: all 0.11s ease-in-out;
+}
+
+form:hover {
+    background-color: whitesmoke;
+}
+
+.setting {
+    position: relative;
+    z-index: 10;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.397);
+    outline: none;
+    font-size: larger;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 19px;
+    cursor: pointer;
+    transition: all 0.11s ease-in-out;
+}
+
+.setting:hover {
+    background-color: white;
+}
+
+.setting details {
+    position: relative;
+}
+
+details summary {
+    list-style: none;
+}
+
+.under {
+    font-size: medium;
+}
+
+details .Theme_and_units {
+    top: 38px;
+    left: 19px;
+    list-style: none;
+    position: absolute;
+    list-style: none;
+    width: max-content;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+}
+
+details .units {
+    cursor: pointer;
+    top: 45px;
+    left: -73px;
+    list-style: none;
+    position: absolute;
+    list-style: none;
+    width: max-content;
+    border-radius: 8px;
+    background-color: white;
+}
+
+details .Theme {
+    top: 15px;
+    left: -76px;
+    list-style: none;
+    position: absolute;
+    list-style: none;
+    width: max-content;
+    border-radius: 8px;
+    background-color: white;
+}
+
+details ul li {
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.11s ease-in-out;
+}
+
+details ul li:hover {
+    background-color: rgb(219, 216, 216);
+}
+
+@media (max-width:470px) {
+
+    main,
+    .bgimage {
+        width: 360px;
+    }
+
+    input,
+    .search {
+        padding: 8px;
+    }
+
+    form {
+        margin-left: 25px;
+    }
+
+    .setting {
+        padding: 8px;
+    }
+
+}
+
+.circleBox {
+    position: relative;
+    z-index: 10;
+    /* border: 2px solid rgba(255, 255, 255, 0.858); */
+    padding: 2px;
+    border-radius: 50%;
+    box-shadow: inset 8px -7px 12px rgba(158, 204, 250, 0.601);
+    margin-left: 60px;
+}
+
+.lenslook {
+    position: relative;
+    z-index: 10;
+    font-family: "Roboto Flex", sans-serif, 'Lucida Grande', 'Lucida Sans', Arial;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 0px 20px 0px 20px;
+    box-shadow: -3px 0px 10px 5px rgb(25, 25, 25);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.139);
+    text-align: center;
+}
+
+.cityname_and_icon {
+    color: rgb(133, 125, 125);
+    margin-top: 19px;
+    margin-bottom: 9px;
+    font-size: larger;
+}
+
+.cityname {
+    display: inline;
+    font-family: "Fjalla One", sans-serif;
+    position: relative;
+    z-index: 10;
+    font-weight: 520;
+    /* margin-top: 10px; */
+    padding-top: 10px;
+}
+
+.temperature_and_icon {
+    color: rgb(133, 125, 125);
+    font-size: 31px;
+}
+
+.temperature {
+    display: inline;
+    position: relative;
+    z-index: 10;
+    font-weight: 300;
+}
+
+.tempSticker {
+    position: relative;
+    z-index: 10;
+    filter: drop-shadow(0 10px 20px rgb(0, 0, 0));
+}
+
+.cloud_img {
+    height: 150px;
+}
+
+.weather_info {
+    position: relative;
+    z-index: 10;
+    margin-top: 7px;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 9px;
+    font-size: large;
+    color: beige;
+}
+
+.info_box {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 5px;
+    border: 2px solid rgba(131, 238, 255, 0.838);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.247));
+    border-radius: 20px;
+
+}
+
+main.error {
+    animation: errorEffect 0.3s linear 1;
+}
+
+@keyframes errorEffect {
+    0% {
+        transform: translate(10px, 5px);
+    }
+
+    25% {
+        transform: translate(-4px, 6px);
+    }
+
+    50% {
+        transform: translate(5px, -10px);
+    }
+
+    75% {
+        transform: translate(-6px, -1px);
+    }
+
+    100% {
+        transform: translate(7px, 3px);
+    }
+}
