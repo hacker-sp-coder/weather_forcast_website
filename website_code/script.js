@@ -1,3 +1,5 @@
+// js code for weather forcast 
+
 let locationSearch = document.getElementById("locationSearch")
 let bgimage = document.querySelector(".bgimage")
 let setting = document.querySelector(".setting")
@@ -50,25 +52,25 @@ const searchWeather = () => {
                 pressure_value.innerText = `${usingPressure} hPa`;
                 let weather_condition = data.weather[0].id;
                 if (weather_condition == 800) {
-                    document.body.style.backgroundImage = "url('assests/blueSkymountain.jpg')";
+                    document.body.style.backgroundImage = "url('../assests/blueSkymountain.webp')";
                 }
                 else if (weather_condition < 800 && weather_condition > 700) {
-                    document.body.style.backgroundImage = "url('assests/mistMountain.jpg')";
+                    document.body.style.backgroundImage = "url('../assests/mistMountain.webp')";
                 }
                 else if (weather_condition < 600 && weather_condition >= 500) {
-                    document.body.style.backgroundImage = "url('assests/more.webp')";
+                    document.body.style.backgroundImage = "url('../assests/more.webp')";
                 }
                 else if (weather_condition < 250 && weather_condition >= 200) {
-                    document.body.style.backgroundImage = "url('assests/stormy-sky-mountain.webp')";
+                    document.body.style.backgroundImage = "url('../assests/stormy-sky-mountain.webp')";
                 }
                 else if (weather_condition < 350 && weather_condition >= 300) {
-                    document.body.style.backgroundImage = "url('assests/mistMountain.jpg')";
+                    document.body.style.backgroundImage = "url('../assests/mistMountain.webp')";
                 }
                 else if (weather_condition > 800) {
-                    document.body.style.backgroundImage = "url('assests/rainyMountain.jpg')";
+                    document.body.style.backgroundImage = "url('../assests/rainyMountain.webp')";
                 }
                 else if (weather_condition < 650 && weather_condition >= 600) {
-                    document.body.style.backgroundImage = "url('assests/snowMountain.jpg')";
+                    document.body.style.backgroundImage = "url('../assests/snowMountain.webp')";
                 }
 
                 const fer = usingTemp * (9 / 5) + 32;
